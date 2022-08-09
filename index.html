@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>vue 3 cource</title>
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+    <style>
+      .box {
+        padding: 100px 0px;
+        width: 400px;
+        background: #ddd;
+        margin: 20px;
+        display: inline-block;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div v-if="showbooks">
+        <p>{{title}} - {{author}} - {{age}}</p>
+      </div>
+
+      <!-- <button v-on:click="age++">Increase</button>
+      <button @click="age--">decrease</button>      -->
+
+      <button @click="changeshowBook">
+        <span v-if="showbooks"> hidden </span>
+        <!-- <span v-if=!showbook>show</span> -->
+        <span v-else>show</span>
+      </button>
+      <!-- <div v-show=showbooks>showing...</div> -->
+      <br />
+      <hr />
+      <br />
+
+      <div class="box" @mouseover="handleevent">mouseover</div>
+      <div class="box" @mouseleave="handleevent">mouse leave</div>
+      <div class="box" @dblclick="handleevent">double click</div>
+      <div class="box" @mousemove="handlemovemouse">{{x}},{{y}}</div>
+
+
+      
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
